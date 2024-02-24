@@ -42,5 +42,21 @@ npm start
 ```
 This will start the development server, and you can access the app at http://localhost:3000 in your browser. 
 
+## ScreenShots
+
+1. Large devices
+
+<img width="960" alt="image" src="https://github.com/khwaabknight/radiant-riches-assign/assets/89650360/739bbc72-50e0-49dd-b68f-2a529b9fd579">
+
+2. Medium devices
+
+<img width="960" alt="image" src="https://github.com/khwaabknight/radiant-riches-assign/assets/89650360/f5093820-232b-4855-9953-2ed1260f1a9d">
+
+3. Small Devices
+
+<img width="960" alt="image" src="https://github.com/khwaabknight/radiant-riches-assign/assets/89650360/ae4caea0-6d03-4735-b433-0eece098b75f">
+
+
+
 
 
