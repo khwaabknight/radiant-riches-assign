@@ -1,6 +1,15 @@
 .product-card{
     margin-top: 2rem;
     @include grid($col:4,$gap:1rem);
+    @include mobile{
+        grid-template-columns: 1fr 1fr;
+    }
+    @include tablet{
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 90%;
+        margin: 1rem auto;
+        max-width: 48rem;
+    }
     padding: 1rem;
     border-radius: 12px;
     position: relative;
@@ -46,6 +55,14 @@
     .prod-image{
         grid-column: span 1;
         @include flex($direction:column);
+        @include mobile{
+            order: 1;
+            grid-column: span 2;
+        }
+        @include tablet{
+            grid-column: span 2;
+            order: 1;
+        }
         img{
             width: 60%;
         }
@@ -61,6 +78,15 @@
         padding: 1rem;
         @include flex($direction:column,$justify:flex-start,$align:stretch);
         gap: 0.75rem;
+
+        @include mobile{
+            grid-column: span 3;
+            order: 3;
+        }
+        @include tablet{
+            grid-column: span 3;
+            order: 3;
+        }
 
         .prod-desc{
             font-weight: 400;
@@ -179,8 +205,14 @@
         }
     }
     .prod-performance{
-        grid-column: span 1;
         @include flex($direction:column,$justify:space-between,$align:stretch);
+
+        @include mobile{
+            order: 2;
+        }
+        @include tablet{
+            order: 2;
+        }
         
         .prod-gonfalon{
             @include flex($direction:column,$justify:flex-start);
@@ -191,6 +223,13 @@
             padding-top: 0.75rem;
             padding-bottom: 1rem;
             border-radius: 0 0 12px 12px;
+            @include mobile{
+                width: 80%;
+                margin-bottom: 1.5rem ;
+            }
+            @include tablet{
+                margin-bottom:2rem ;
+            }
 
             .i-div {
                 position: relative;

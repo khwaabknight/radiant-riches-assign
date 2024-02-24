@@ -13,14 +13,14 @@ const Stars:React.FC<StarsProps> = ({stars,maxStars}) => {
   let i = 0
 
   for(; i < filledStars; i++){
-    starsArray.push(<img src='/images/body/fill-star.svg' alt=''/>)
+    starsArray.push(<img key={i} src='/images/body/fill-star.svg' alt=''/>)
   }
   if(stars % 1 !== 0){
-    starsArray.push(<img src='/images/body/half-star.svg' alt=''/>)
+    starsArray.push(<img key={i} src='/images/body/half-star.svg' alt=''/>)
     i++;
   }
   for(; i < totalStars; i++){
-    starsArray.push(<img src='/images/body/empty-star.svg' alt=''/>)
+    starsArray.push(<img key={i} src='/images/body/empty-star.svg' alt=''/>)
   }
 
   return (

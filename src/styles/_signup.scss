@@ -2,6 +2,17 @@
 
 .signup{
     @include grid($gap:1rem);
+    margin: 5rem 2rem;
+    width: 100%;
+
+    @include mobile{
+        margin: 2rem 0.25rem;
+        grid-template-columns: 1fr;
+    }
+    @include tablet{
+        margin: 2rem 0.25rem;
+        grid-template-columns: 1fr;
+    }
 
     .signup-tag{
         p{
@@ -16,6 +27,9 @@
 
     .signup-form{
         @include flex($justify:center,$align:center);
+
+        width: 100%;
+
 
         &:hover{
             transform: scale(102%);
@@ -53,7 +67,7 @@
     background-color: #1B88F4;
     border: none;
     color: white;
-    padding: 1rem 4rem;
+    padding: 1rem 1.5rem;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
@@ -62,6 +76,18 @@
     cursor: pointer;
     border-radius: 0 0.5rem 0.5rem 0;
     transition: 0.3s;
+
+    @include mobile{
+        width: max-content;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    @include mobile{
+        width: 100%;
+        @include flex($justify:flex-end);
+        font-size: 12px;
+        line-height: 16px;
+    }
     &:hover{
         background-color: #1B88F4EF;
     }

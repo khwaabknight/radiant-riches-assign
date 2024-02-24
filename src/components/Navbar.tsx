@@ -23,6 +23,7 @@ const navlinks = [
 const Navbar = () => {
 
     const [search, setSearch] = useState('');
+    const [menuActive, setMenuActive] = useState(false);
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(e.target.value)
@@ -31,13 +32,21 @@ const Navbar = () => {
   return (
     <div className='navcontainer'>
         <div className='navbar'>
-            <form className='search-wrapper' onSubmit={() => {}}>
-                <Input type="text" name="navbar-search" id="navbar-search" onChange={onChange} value={search}/>
-                <button type='submit' className='searchicon'>
-                    <img src="/images/navbar/navbar-searchicon.png" alt="search" />
+            <div className='mobile-nav'>
+                <button
+                    className='menu-btn'
+                    onClick={() => setMenuActive(!menuActive)}
+                >
+                    <img src={menuActive ? "images/navbar/cross.svg" : "/images/navbar/menu.svg"} alt='' className={`menu-icon`}/>
                 </button>
-            </form>
-            <div className='navlinks'>
+                <form className='search-wrapper' onSubmit={() => {}}>
+                    <Input type="text" name="navbar-search" id="navbar-search" onChange={onChange} value={search}/>
+                    <button type='submit' className='searchicon'>
+                        <img src="/images/navbar/navbar-searchicon.png" alt="search" />
+                    </button>
+                </form>
+            </div>
+            <div className={`navlinks ${menuActive && 'menu-active'}`}>
                 {
                     navlinks.map((item) => (
                         <NavLink key={item.id} to={item.path} className={`navlink ${"navlink"+item.id}`}>{item.title}</NavLink>

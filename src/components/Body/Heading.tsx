@@ -1,3 +1,13 @@
+import Select from "./Common/Select"
+
+const selectOptions = [
+  "Top Relevant",
+  "Top Selling",
+  "Top Free",
+  "Top Rated",
+  "Top Recommended",
+]
+
 const Heading = () => {
   return (
     <div className='heading'>
@@ -15,9 +25,8 @@ const Heading = () => {
           </div>
         </div>
 
-        <div className="right">
-          <p>Top Relevant</p>
-          <img src='/images/body/down.svg' alt='down'/>
+        <div className="right custom-select">
+          <Select optionList={selectOptions}/>
         </div>
 
       </div>

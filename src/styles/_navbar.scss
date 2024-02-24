@@ -5,12 +5,44 @@
 .navbar {
     height: 4rem;
     width: $doc-width;
+    max-width: $max-width;
     margin: 0 auto;
-    padding: 0 5rem;
+
+    @include mobile{
+        width: 100%;
+        padding: 0 1rem;
+        display: block;
+        height: fit-content;
+        .mobile-nav{
+            width: 100%;
+            @include flex($justify: space-between);
+            padding: 1rem;
+        }
+    }
+
+    @include tablet{
+        width: 100%;
+        padding: 0 0.5rem;
+    }
 
     @include flex($justify:space-evenly);
-    gap: 3rem;
+    gap: 3rem;    
 
+    .menu-btn{
+        @include mobile{
+            @include flex();
+        }
+        display: none;
+        
+        background: inherit;
+        border: 1px solid #fff;
+        padding: 0.25rem 0.5rem;
+        border-radius:4px;
+        img{
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    }
     .search-wrapper{
         position: relative;
         .searchicon{
@@ -28,8 +60,14 @@
     }
 
     .navlinks{
-        display: flex;    
-        gap: 4rem;
+        @include flex($justify: space-evenly);
+        column-gap: 4rem;
+        background: $dark-color;
+
+        @include mobile{
+            display: none;
+        }
+
         .navlink {
             text-decoration: none;
             color: clr(nav-text);
@@ -46,5 +84,29 @@
         .navlink3 {
             margin-left: 1rem;
         }
+    }
+    .menu-active{
+        @include flex($direction:column);
+        background: $dark-color;
+
+        .navlink {
+            text-decoration: none;
+            color: clr(nav-text);
+            font-family: $font-inter;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 20px;
+            padding-bottom: 0.75rem;
+            cursor: pointer;
+
+            &:hover{
+                color: #fff;
+            }
+        }
+        .navlink3 {
+            margin-left: 0;
+        }
+        
+
     }
 }

@@ -39,7 +39,7 @@ const Services = () => {
     <div className='services'>
       {
         services.map((service) => (
-        <Link to={service.link}>{service.title}</Link>
+          <Link key={service.id} to={service.link}>{service.title}</Link>
         ))
       }
 

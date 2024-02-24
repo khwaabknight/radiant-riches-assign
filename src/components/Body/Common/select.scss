@@ -1,0 +1,20 @@
+.dropdown-select{
+    cursor: pointer;
+    appearance: none;
+    padding: 0rem 1rem;
+    font-size: 12px;
+    line-height: 20px;
+    color: #727D87;
+    border: none;
+    background: inherit;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+.dropdown-arrow{
+    position: absolute;
+    right: 0.75rem;
+    pointer-events: none;
+}

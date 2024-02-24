@@ -1,5 +1,8 @@
 import React from 'react'
 import FooterColumn from './Footer/FooterColumn'
+import Select from './Body/Common/Select';
+
+const selectOptions = ["United States","India", "United Kingdom", "Canada"];
 
 const footerLinks = [
   {
@@ -40,11 +43,7 @@ const Footer = () => {
         <div className='footer-right'>
           {/* Country Select */}
           <div className='country-select'>
-            <select>
-              <option value='us'>United States</option>
-              <option value='uk'>United Kingdom</option>
-              <option value='ca'>Canada</option>
-            </select>
+            <Select optionList={selectOptions}/>
           </div>
 
         </div>

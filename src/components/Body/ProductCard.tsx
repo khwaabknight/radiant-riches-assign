@@ -72,9 +72,9 @@ const ProductCard:React.FC<ProductCardProps> = ({id,title,description,imgcaption
                         <ul className='prod-list-advantages'>
                             {
                                 advantages.map((advantage, index) => (
-                                    <li>
+                                    <li key={index}>
                                         <img src='/images/body/blue-check.svg' alt=''/>
-                                        <p key={index}>{advantage}</p>
+                                        <p>{advantage}</p>
                                     </li>
                                 ))
                             }

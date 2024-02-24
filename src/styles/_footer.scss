@@ -1,18 +1,34 @@
-
 .footer-wrapper{
     background: $dark-color;
+    width: 100%;
+    overflow-x: hidden;
 
     .footer-container{
         font-family: $font-inter;
         width: $doc-width;
+        max-width: $max-width;
+
         margin: 0 auto;
         padding-top: 3rem;
         padding-bottom: 8rem;
 
         @include grid($gap:2rem);
+        
+        @include tablet{
+            grid-template-columns: 3fr 1fr;
+        }
+        @include mobile{
+            grid-template-columns: 1fr;
+        }
 
         .footer-left{
             @include grid($gap:4rem);
+
+            @include mobile{
+                grid-template-columns: 1fr;
+                order: 2;
+            }
+
 
             .footer-column{
                 h4{
@@ -49,7 +65,18 @@
 
         .footer-right{
             @include flex($justify:center);
-            gap: 1rem;
+            @include tablet{
+                justify-content: flex-start;
+            }
+            @include mobile{
+                justify-content: center;
+                order: 1;
+            }
+            .country-select{
+                @include flex();
+                padding: 0 1rem;
+                position: relative;
+            }
         }
 
 
