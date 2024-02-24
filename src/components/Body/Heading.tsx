@@ -1,4 +1,6 @@
-import Select from "./Common/Select"
+import Select from "./Common/SelectInput/Select"
+
+
 
 const selectOptions = [
   "Top Relevant",

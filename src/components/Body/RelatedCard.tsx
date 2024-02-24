@@ -1,6 +1,6 @@
 import React from 'react'
-import Discount from './Common/Discount'
-import Button from './Common/Button'
+import Discount from './Common/Discount/Discount'
+import Button from './Common/Button/Button'
 
 type RelatedCardProps = {
     image: string

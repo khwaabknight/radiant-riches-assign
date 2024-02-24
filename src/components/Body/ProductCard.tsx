@@ -1,7 +1,7 @@
 import React from 'react'
-import Discount from './Common/Discount'
-import Button from './Common/Button'
-import Stars from './Common/Stars'
+import Discount from './Common/Discount/Discount'
+import Stars from './Common/RatingStars/Stars'
+import Button from './Common/Button/Button'
 
 type ProductCardProps = {
     id: number,

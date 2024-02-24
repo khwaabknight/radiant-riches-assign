@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import Input from './Body/Common/Input'
+import Input from './Body/Common/Input/Input';
 
 const navlinks = [
     {

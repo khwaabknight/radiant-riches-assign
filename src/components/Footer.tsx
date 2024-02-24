@@ -1,6 +1,6 @@
 import React from 'react'
 import FooterColumn from './Footer/FooterColumn'
-import Select from './Body/Common/Select';
+import Select from './Body/Common/SelectInput/Select';
 
 const selectOptions = ["United States","India", "United Kingdom", "Canada"];
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Input from './Common/Input'
-import Button from './Common/Button'
+import Input from './Common/Input/Input'
+import Button from './Common/Button/Button'
 
 const SignUp = () => {
   const [signup, setSignup] = useState("")
