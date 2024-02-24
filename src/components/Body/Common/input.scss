@@ -1,0 +1,21 @@
+
+
+.inputbox {
+    background: #fff;
+    height: 2.25rem;
+    width: 16.125rem;
+    padding-left: 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+
+    &::placeholder {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

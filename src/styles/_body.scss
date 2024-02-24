@@ -1,0 +1,145 @@
+@import './relatedcard';
+@import './signup';
+@import './productcard';
+@import './../components/Body/Common/stars.scss';
+
+.body-wrapper {
+    background: $light-color;
+    font-family: $font-inter;
+
+    .body-container{
+        width: $doc-width;
+        margin: 0 auto;
+        margin-top: 2rem;
+
+        h2{
+            font-weight: 400;
+            font-size: 3rem;
+            line-height: 3.75rem;
+        }
+        
+        hr{
+            height: 1px;
+            background: #E1E4E6;
+            border:none;
+        }
+
+        .filter-bar {
+            @include flex($justify:space-between);
+            color: clr(body-text);
+
+            .left{
+                @include flex($justify:flex-start);
+                gap: 1rem;
+                
+                div{
+                    &:nth-child(1){
+                        padding: 0.5rem 0.25rem 0.5rem 0;
+                    }
+                    
+                    &:nth-child(2){
+                        padding: 0.5rem 0.25rem;
+                    }
+                    @include flex($justify:center,$align:center);
+                    gap: 0.5rem;
+                    border-radius: 0.5rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        background: #f1f4f6;
+                    }               
+
+                    img{
+                        height: 1.25rem;
+                        width: 1.25rem;
+                    }
+
+                    p{
+                        font-size: 10px;
+                        font-weight: 400;
+                        line-height: 1.25rem;
+                    }
+                }
+            }
+
+            .right{
+                @include flex();
+                gap: 0.5rem;
+                padding: 0rem 0.25rem 0rem 0;
+                cursor: pointer;
+            }
+        }
+
+        .services{
+            @include flex($justify:flex-start,$align:flex-start);
+            margin-left: 1rem;
+            gap: 2rem;
+            padding: 0.5rem 0rem;
+            
+
+            a{
+                padding: 0.25rem 1rem;
+                text-decoration: none;
+                color: clr(body-text);
+                font-family: $font-inter;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 20px;
+                border-radius: 0.5rem;
+                cursor: pointer;
+
+                &:hover{
+                    background: #f1f4f6;
+                }
+            }
+        }
+
+        .location{
+            @include flex($justify:flex-start);
+
+            img{
+                height: 0.75rem;
+                width: 0.625rem;
+            }
+
+            a{
+                padding: 0.25rem 1rem;
+                text-decoration: none;
+                color: clr(body-text);
+                font-family: $font-inter;
+                font-weight: 400;
+                font-size: 11px;
+                line-height: 20px;
+                border-radius: 0.5rem;
+                cursor: pointer;
+
+                &:hover{
+                    background: #f1f4f6;
+                }
+            }
+            
+        }
+
+        .products{
+            @include flex($direction:column,$justify:flex-start,$align:stretch);
+        }
+
+        .related-deals{
+            @include flex($justify:flex-start,$align:flex-start,$direction:column);
+            h3{
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 2.75rem;
+                color: clr(grey-8);
+            }
+            .related-card-container{
+                @include grid($col:3,$gap:1rem);
+            }
+        }
+
+    }
+}
+
+
+
+

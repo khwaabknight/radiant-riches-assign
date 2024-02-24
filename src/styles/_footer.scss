@@ -1,0 +1,58 @@
+
+.footer-wrapper{
+    background: $dark-color;
+
+    .footer-container{
+        font-family: $font-inter;
+        width: $doc-width;
+        margin: 0 auto;
+        padding-top: 3rem;
+        padding-bottom: 8rem;
+
+        @include grid($gap:2rem);
+
+        .footer-left{
+            @include grid($gap:4rem);
+
+            .footer-column{
+                h4{
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    color: #fff;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    padding: 0.75rem 0;
+                }
+                ul{
+                    list-style-type: none;
+                    a{
+                        text-decoration: none;
+                        color: clr(footer-text);
+                        font-size: 13px;
+                        line-height: 20px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .footer-column:nth-child(1) {
+                li{
+                    padding: 0.425rem 0;
+                }
+            }
+            .footer-column:nth-child(2) {
+                li{
+                    padding: 0.375rem 0;
+                }
+            }
+
+        }
+
+        .footer-right{
+            @include flex($justify:center);
+            gap: 1rem;
+        }
+
+
+
+    }
+}

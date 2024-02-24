@@ -1,0 +1,50 @@
+.navcontainer {
+    background-color: $dark-color; 
+}
+  
+.navbar {
+    height: 4rem;
+    width: $doc-width;
+    margin: 0 auto;
+    padding: 0 5rem;
+
+    @include flex($justify:space-evenly);
+    gap: 3rem;
+
+    .search-wrapper{
+        position: relative;
+        .searchicon{
+            position: absolute;
+            left: 0.5rem;
+            top: 55%;
+            transform: translateY(-50%);
+            background: #fff;
+            border: none;
+            img{
+                height: 1.5rem;
+                width: 1.5rem;
+            }
+        }
+    }
+
+    .navlinks{
+        display: flex;    
+        gap: 4rem;
+        .navlink {
+            text-decoration: none;
+            color: clr(nav-text);
+            font-family: $font-inter;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 20px;
+            cursor: pointer;
+
+            &:hover{
+                color: #fff;
+            }
+        }
+        .navlink3 {
+            margin-left: 1rem;
+        }
+    }
+}
